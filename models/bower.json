@@ -1,0 +1,17 @@
+{
+  "name": "myshopapps",
+  "authors": [
+    "prakash <pgk639117@gmail.com>"
+  ],
+  "description": "shopping",
+  "main": " index.html",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

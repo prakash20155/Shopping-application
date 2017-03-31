@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Electronic Store a Ecommerce Online Shopping | Home :: MeanMart</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Electronic Store, Flat, Android,
+	SmartPhone, Nokia, Samsung, LG, SonyEricsson, Motorola" />
+    <!-- //for-mobile-apps -->
+    <!-- css files -->
+    <link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/apps/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/apps/css/fasthover.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/apps/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/apps/css/jquery.countdown.css" />
+    <link rel="stylesheet" href="/lib/flexisel/css/style.css" />
+    <link href='http://fonts.googleapis.com/css?family=Glegoo:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+</head>
+<body ng-app="myshopapps">
+<!-- header -->
+<ng-include src="'/apps/partialViews/shared/header.html'"></ng-include>
+<!-- //header -->
+<!-- navigation -->
+<ng-include src="'/apps/partialViews/shared/topNavigationMenu.html'"></ng-include>
+<!-- //navigation -->
+<div ng-view>
+    <!-- main page content -->
+</div>
+<!-- newsletter -->
+<ng-include src="'/apps/partialViews/shared/newsletter.html'"></ng-include>
+<!-- //newsletter -->
+<!-- footer -->
+<ng-include src="'/apps/partialViews/shared/footer.html'"></ng-include>
+<!-- //footer -->
+
+<script src="/lib/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/lib/angular/angular.min.js"></script>
+<script src="/lib/angular-route/angular-route.min.js"></script>
+<script src="/lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script src="/lib/flexisel/js/jquery.flexisel.js"></script>
+<script src="/lib/ng-file-upload/ng-file-upload-all.min.js"></script>
+<script src="/apps/app.js"></script>
+<script src="/apps/controllers/homeCtrl.js"></script>
+<script src="/apps/controllers/mainNavigationCtrl.js"></script>
+<script src="/apps/controllers/productMainCtrl.js"></script>
+<script src="/apps/controllers/productDetailsCtrl.js"></script>
+<script src="/apps/controllers/brandCtrl.js"></script>
+<script src="/apps/controllers/adminCtrl.js"></script>
+<script src="/apps/directive/flexisel.js"></script>
+
+<script type="application/x-javascript">
+    addEventListener("load", function() {
+        setTimeout(hideURLbar, 0);
+    }, false);
+    function hideURLbar(){
+        window.scrollTo(0,1);
+    }
+    jQuery(document).ready(function($) {
+        $(".scroll").click(function(event){
+            event.preventDefault();
+            $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+        });
+    });
+</script>
+</body>
+</html>

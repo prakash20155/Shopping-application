@@ -1,0 +1,128 @@
+<div class="mail">
+    <div class="container">
+        <div class="grid_3 grid_4">
+            <h3 class="w3ls-hdg">New Product</h3>
+            <div class="tab-content">
+                <div class="tab-pane active" id="horizontal-form">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="title" class="col-sm-2 control-label">Title</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control1" id="title" placeholder="title">
+                            </div>
+                            <div class="col-sm-2 ">
+                                <p class="help-block">Your help text!</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="price" class="col-sm-2 control-label">price</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control1" id="price" placeholder="price">
+                            </div>
+                            <div class="col-sm-2 ">
+                                <p class="help-block">Your help text!</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="actualPrice" class="col-sm-2 control-label">Actual Price</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control1" id="actualPrice" placeholder="actualPrice">
+                            </div>
+                            <div class="col-sm-2 ">
+                                <p class="help-block">Your help text!</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="stock" class="col-sm-2 control-label">Unit Stock</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control1" id="stock" placeholder="stock">
+                            </div>
+                            <div class="col-sm-2 ">
+                                <p class="help-block">Your help text!</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="description" class="col-sm-2 control-label">Description</label>
+                            <div class="col-sm-8">
+                                <textarea id="description" name="description" class="form-control1" placeholder="description" rows="4" cols="50"></textarea>
+                            </div>
+                            <div class="col-sm-2 ">
+                                <p class="help-block">Your help text!</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="specification" class="col-sm-2 control-label">specification</label>
+                            <div class="col-sm-8">
+                                <textarea id="specification" name="specification" class="form-control1" placeholder="specification" rows="4" cols="50"></textarea>
+
+                            </div>
+                            <div class="col-sm-2 ">
+                                <p class="help-block">Your help text!</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="brand" class="col-sm-2 control-label">Brand</label>
+                            <div class="col-sm-8">
+                                <select name="brand" id="brand" class="form-control1">
+                                    <option>--- choose --- </option>
+                                    <option>Dolore, ab unde modi est!</option>
+                                    <option>Illum, fuga minus sit eaque.</option>
+                                    <option>Consequatur ducimus maiores voluptatum minima.</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Category</label>
+                            <div class="col-sm-8">
+                                <div class="checkbox-inline1"><label><input type="checkbox"> Mobile</label></div>
+                                <div class="checkbox-inline1"><label><input type="checkbox"> Laptop</label></div>
+                                <div class="checkbox-inline1"><label><input type="checkbox"> Watch</label></div>
+                                <div class="checkbox-inline1"><label><input type="checkbox"> Camera</label></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="isActive" class="col-sm-2 control-label">is Active</label>
+                            <div class="col-sm-8">
+                                <div class="checkbox-inline"><label><input type="checkbox" id="isActive" checked="checked"> Yes</label></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="isFeatured" class="col-sm-2 control-label">is Featured</label>
+                            <div class="col-sm-8">
+                                <div class="checkbox-inline"><label><input type="checkbox" id="isFeatured" checked="checked"> Yes</label></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="image" class="col-sm-2 control-label">Image</label>
+                            <div class="col-sm-8">
+                                <input type="file" class="form-control1" id="image" placeholder="image">
+                            </div>
+                        </div>
+                        <fieldset>
+                            <legend>Product Variant:</legend>
+                            <div class="form-group" ng-repeat="variant in variantinputs">
+                                <label class="col-sm-2 control-label">Variant 1</label>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control1" ng-model="variant.key" placeholder="key">
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control1" ng-model="variant.value" placeholder="value">
+                                </div>
+                                <div class="col-sm-2 ">
+                                    <button class="btn btn-danger pull-right" ng-show="$last" ng-click="removeChoice()">Remove</button>
+                                </div>
+
+                            </div>
+                            <button class="btn btn-primary pull-right" ng-click="addvariantfield()">Add </button>
+                        </fieldset>
+                        <div class="form-group">
+                            <div class="col-sm-6">
+                                <button class="btn btn-primary pull-right" ng-disabled="brandform.$invalid" type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

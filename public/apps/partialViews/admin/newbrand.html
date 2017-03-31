@@ -1,0 +1,54 @@
+<div class="mail">
+    <div class="container">
+        <div class="grid_3 grid_4">
+            <h3 class="w3ls-hdg">New Brand</h3>
+            <div class="tab-content">
+                <div class="tab-pane active" id="horizontal-form" >
+                    <form name="brandform" ng-submit="saveBrand(brandform.$valid)" class="form-horizontal" enctype="multipart/form-data" novalidate>
+                        <div class="form-group" ng-class="{ 'has-error' : brandform.brandname.$invalid && !brandform.brandname.$pristine }">
+                            <label for="brandname" class="col-sm-2 control-label">Brand Name</label>
+                            <div class="col-sm-8">
+                                <input type="text" name="brandname" class="form-control1" ng-model="brandname" id="brandname" placeholder="enter brand" ng-required="true">
+                            </div>
+                            <div ng-hide="brandform.brandname.$invalid && brandform.brandname.$dirty" class="col-sm-2">
+                                <p class="help-block">Brand Name is required.</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="description" class="col-sm-2 control-label">Description</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control1" name="description" ng-model="description" id="description" placeholder="enter description max 10 character" ng-required="true"  ng-minlength="10">
+                            </div>
+                            <div class="col-sm-2">
+                                <p ng-show="brandform.description.$error.minlength" class="help-block">description is too short.</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Is Active</label>
+                            <div class="col-sm-8">
+                                <div class="checkbox-inline"><label>
+                                    <input ng-model="isactive" type="checkbox"> Active</label></div>
+                            </div>
+                        </div>
+                        <div class="form-group mb-n">
+                            <label for="image" class="col-sm-2 control-label label-input-lg">Image/Logo</label>
+                            <div class="col-sm-8">
+
+                                <input type="file" ngf-select="" ng-model="brandlogo" name="file" ngf-accept="'image/*'"  required="" class="form-control1 input-lg" id="image" placeholder="image">
+                            </div>
+                            <img ngf-src="brandlogo" style="width: 64px;height:64px;float: none;">
+                            <span class="progress" ng-show="picFile.progress >= 0">
+                  <div style="width:{{picFile.progress}}%" ng-bind="brandlogo.progress + '%'" class="ng-binding"></div>
+              </span>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-6">
+                                <button class="btn btn-primary pull-right" ng-disabled="brandform.$invalid" type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

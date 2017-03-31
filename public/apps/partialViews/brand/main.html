@@ -1,0 +1,25 @@
+<div class="banner banner10">
+    <div class="container">
+        <h2>Our Brands</h2>
+    </div>
+</div>
+<div class="breadcrumb_dress">
+    <div class="container">
+        <ul>
+            <li><a href="#/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a> <i>/</i></li>
+            <li>Brands</li>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+        <div uib-slide ng-repeat="slide in slides track by slide.slideid" index="slide.slideid">
+            <img ng-src="{{slide.imageUrl}}" style="margin:auto;">
+            <div class="carousel-caption">
+                <h4> {{slide.description}}</h4>
+                <p>{{slide.key}}</p>
+                <p>{{slide.val}}</p>
+            </div>
+        </div>
+    </div>
+</div>
